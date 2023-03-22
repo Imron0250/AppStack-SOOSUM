@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="content">
+    <div class="container-fluid p-0">
+
+        <h1 class="h3 mb-3">Form Layouts</h1>
+
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">How To Use O`zgartirish</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label class="form-label">Title_uz</label>
+                                <textarea class="form-control" name="title_uz" placeholder="Textarea" rows="2"></textarea>
+                                <label class="form-label">Title_ru</label>
+                                <textarea class="form-control" name="title_ru" placeholder="Textarea" rows="2"></textarea>
+                                <label class="form-label">Text_uz</label>
+                                <textarea class="form-control" name="text_uz" placeholder="Textarea" rows="2"></textarea>
+                                <label class="form-label">Text_ru</label>
+                                <textarea class="form-control" name="text_ru" placeholder="Textarea" rows="2"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+{% endblock %}
